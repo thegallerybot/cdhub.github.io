@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="CD Hub - Beta Tester Apply">
+  <meta property="og:description" content="Apply to become a Beta Tester for CD Hub and help us shape the future!">
+  <meta property="og:image" content="https://cdhub.store/Images/logo.png">
+  <meta property="og:url" content="https://cdhub.store/BetaTesterSignup">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CD Hub - Beta Tester Apply">
+  <meta name="twitter:description" content="Apply to become a Beta Tester for CD Hub and help us shape the future!">
+  <meta name="twitter:image" content="https://cdhub.store/Images/logo.png">
+  <title>CD Hub - Beta Tester Apply</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../Images/logo.png">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <div class="links">
+      <a href="https://cdhub.store/">Home</a>
+      <a href="../../Downloads">Downloads</a>
+      <a href="../../Products">Products</a>
+      <a href="../../ToS">ToS</a>
+    </div>
+  </div>
+
+  <!-- Sidebar for mobile -->
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn">&times;</div>
+    <a href="https://cdhub.store/">Home</a>
+    <a href="../../Downloads">Downloads</a>
+    <a href="../../Products">Products</a>
+    <a href="../../ToS">ToS</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+    <h1 class="title">Beta Tester Apply</h1>
+    <p class="description">Complete the form below to join our Beta Tester program.</p>
+
+    <form id="betaTesterForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" placeholder="Your age" min="13" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" placeholder="Your country" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="paypal">PayPal Email</label>
+        <input type="email" id="paypal" name="paypal" placeholder="Your PayPal email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="discord">Discord Username (e.g., User#1234)</label>
+        <input type="text" id="discord" name="discord" placeholder="Your Discord username" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="additional">Additional Information</label>
+        <textarea id="additional" name="additional" placeholder="Tell us anything else we should know" rows="4"></textarea>
+      </div>
+      
+      <button type="submit" class="btn">Submit Application</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('betaTesterForm');
+    const webhookURL = 'https://discord.com/api/webhooks/1325964921938116619/-Xyo8xmmD2CCY6V3s8RyzmNe1INHKWNOz0S-o7-3jek-xD8aJ1433Qg518t90gzePUjo'; // Replace with your Discord webhook URL
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const payload = {
+        username: "Beta Tester Application",
+        embeds: [
+          {
+            title: "New Beta Tester Application",
+            fields: [
+              { name: "Full Name", value: formData.get('name'), inline: true },
+              { name: "Age", value: formData.get('age'), inline: true },
+              { name: "Country", value: formData.get('country'), inline: true },
+              { name: "PayPal Email", value: formData.get('paypal') },
+              { name: "Discord Username", value: formData.get('discord') },
+              { name: "Additional Information", value: formData.get('additional') || "N/A" }
+            ],
+            color: 65280, // Light green
+          }
+        ]
+      };
+
+      try {
+        const response = await fetch(webhookURL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (response.ok) {
+          alert('Application submitted successfully!');
+          form.reset();
+        } else {
+          alert('Failed to submit your application. Please try again.');
+        }
+      } catch (error) {
+        alert('Error sending application. Please try again later.');
+        console.error(error);
+      }
+    });
+  </script>
+   <script src="../JS/script.js"></script>
+</body>
+</html>
