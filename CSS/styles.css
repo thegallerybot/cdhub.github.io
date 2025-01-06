@@ -12,6 +12,30 @@ body {
   overflow-x: hidden;
 }
 
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stat-icon {
+  width: 32px; /* Tamaño de las imágenes */
+  height: 32px;
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.stat span {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
 /* Particle canvas */
 #particles {
   position: fixed;
