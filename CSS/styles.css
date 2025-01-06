@@ -66,16 +66,27 @@ body {
   cursor: pointer;
 }
 
+/* Sidebar styles */
 .sidebar a {
-  color: #f0f0f0;
+  display: block; /* Apila los enlaces uno encima del otro */
+  padding: 15px;
+  color: white;
   text-decoration: none;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border-bottom: 1px solid #333;
+  font-size: 18px;
 }
 
 .sidebar a:hover {
-  background: #1db954;
+  background-color: #333; /* Resalta al pasar el mouse */
+}
+
+/* Botón de cerrar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
 }
 
 /* Background animation */
