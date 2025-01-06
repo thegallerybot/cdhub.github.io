@@ -236,6 +236,61 @@ cursor: pointer;
   background: #14833b;
 }
 
+.product-box {
+  width: 220px;
+  border: 2px solid #ddd;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-box .product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product-box .price {
+  font-size: 20px;
+  color: #32CD32;
+  margin-bottom: 15px;
+}
+
+.product-box .btn {
+  background-color: #32CD32;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.discord-btn-container {
+  margin-top: 20px;
+}
+
+.discord-btn {
+  background-color: #7289da;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.discord-btn:hover {
+  background-color: #5e73b6;
+}
+
 /* Media query for mobile */
 @media (max-width: 768px) {
   .topbar .menu-icon {
