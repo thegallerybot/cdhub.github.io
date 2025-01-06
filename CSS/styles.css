@@ -12,6 +12,17 @@ body {
   overflow-x: hidden;
 }
 
+/* Particle canvas */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #1a1a1a; /* Fondo oscuro detrás de las partículas */
+}
+
 /* Topbar */
 .topbar {
   display: flex;
@@ -91,23 +102,29 @@ cursor: pointer;
 }
 
 /* Background animation */
+/* Background container */
 .background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(29, 185, 84, 0.2), rgba(18, 18, 18, 0.8));
-  animation: background-move 8s infinite alternate;
   z-index: -1;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
 }
 
-@keyframes background-move {
+/* Gradient animation */
+@keyframes gradient-animation {
   0% {
-    transform: translateX(0) translateY(0);
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    transform: translateX(-10%) translateY(-10%);
+    background-position: 0% 50%;
   }
 }
 
