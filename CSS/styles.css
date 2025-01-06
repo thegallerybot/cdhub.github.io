@@ -132,6 +132,17 @@ cursor: pointer;
   color: #bbb;
 }
 
+.subheading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #32CD32; /* Verde claro, ajusta según prefieras */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+  border-bottom: 2px solid #32CD32;
+  padding-bottom: 5px;
+}
+
 .image {
   width: 80%;
   max-width: 400px;
