@@ -26,9 +26,10 @@ body {
 }
 
 .stat-icon {
-  width: 32px; /* Tamaño de las imágenes */
-  height: 32px;
-  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  width: 32px;  /* Establece el tamaño a un valor adecuado para miniaturas */
+  height: 32px; /* Mantiene las proporciones al redimensionar */
+  object-fit: cover;  /* Asegura que la imagen no se distorsione */
+  margin-right: 10px;  /* Espacio entre la imagen y el texto */
 }
 
 .stat span {
