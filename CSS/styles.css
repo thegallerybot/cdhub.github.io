@@ -96,6 +96,22 @@ body {
   color: #ffffff;
 }
 
+/* Estilo para las listas numeradas y no numeradas */
+ul, ol {
+  margin: 0 auto; /* Centra la lista como bloque */
+  padding: 0; /* Elimina el padding predeterminado */
+  list-style-position: inside; /* Coloca el punto o número dentro del área del texto */
+  text-align: left; /* Alinea el texto a la izquierda */
+  max-width: 600px; /* Ajusta el ancho de la lista si es necesario */
+}
+
+/* Estilo para los elementos de lista */
+li {
+  margin: 10px 0; /* Espaciado entre elementos */
+  padding: 0 10px; /* Espaciado interno si es necesario */
+}
+
+
 /* Particle canvas */
 #particles {
   position: fixed;
