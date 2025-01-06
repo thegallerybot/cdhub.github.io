@@ -42,7 +42,7 @@ body {
   display: block;
   padding: 10px;
   margin-top: 10px;
-  background-color: #32CD32; /* Verde claro */
+  background-color: #7289da; /* Verde claro */
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -50,7 +50,7 @@ body {
 }
 
 .download-box a:hover {
-  background-color: #28a828;
+  background-color: #5e73b6;
 }
 
 .subdesc {
