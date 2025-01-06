@@ -245,6 +245,7 @@ cursor: pointer;
   backdrop-filter: blur(10px); /* Efecto de desenfoque */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
   transition: transform 0.3s ease; /* Transición para efectos interactivos */
+  margin-bottom: 20px;
 }
 
 .product-box h3 {
