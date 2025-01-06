@@ -1,4 +1,4 @@
-// Seleccionar elementos
+// Seleccionar elementos 
 const menuIcon = document.getElementById('menu-icon');
 const sidebar = document.getElementById('sidebar');
 const closeBtn = document.getElementById('close-btn');
