@@ -1,21 +1,21 @@
-// Select elements
+// Seleccionar elementos
 const menuIcon = document.getElementById('menu-icon');
 const sidebar = document.getElementById('sidebar');
 const closeBtn = document.getElementById('close-btn');
 
-// Toggle sidebar visibility
+// Mostrar la barra lateral
 menuIcon.addEventListener('click', () => {
-  sidebar.classList.add('active'); // Show sidebar
+  sidebar.classList.add('active');
 });
 
-// Close sidebar when clicking the close button
+// Cerrar la barra lateral
 closeBtn.addEventListener('click', () => {
-  sidebar.classList.remove('active'); // Hide sidebar
+  sidebar.classList.remove('active');
 });
 
-// Close sidebar when a link is clicked
+// Cerrar la barra lateral al seleccionar un enlace
 document.querySelectorAll('.sidebar a').forEach(link => {
   link.addEventListener('click', () => {
-    sidebar.classList.remove('active'); // Hide sidebar
+    sidebar.classList.remove('active');
   });
 });
