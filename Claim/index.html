@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Pages JSON Example</title>
+</head>
+<body>
+  <h1>Data from Replit</h1>
+  <div id="content"></div>
+
+  <script>
+    // Fetch JSON data from Replit
+    fetch('https://cd-hub.kiniwakimary.repl.co/data')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('content').textContent = JSON.stringify(data, null, 2);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  </script>
+</body>
+</html>
