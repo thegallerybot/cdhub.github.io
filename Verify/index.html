@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CD Hub - Verify</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../Images/logo.png">
+</head>
+<body>
+  <h1>Account Verification</h1>
+  <form id="verify-form">
+    <label for="discord-id">Enter your Discord ID or Name:</label>
+    <input type="text" id="discord-id" name="discord-id" required>
+    <button type="submit">Verify</button>
+  </form>
+
+  <p id="status"></p>
+
+  <script>
+    document.getElementById('verify-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const discordId = document.getElementById('discord-id').value;
+      const urlParams = new URLSearchParams(window.location.search);
+      const token = urlParams.get('token');
+      
+      if (!token) {
+        document.getElementById('status').textContent = 'Invalid token!';
+        return;
+      }
+
+      const ipResponse = await fetch('https://api.ipify.org?format=json');
+      const ipData = await ipResponse.json();
+
+      // Enviar datos al backend
+      const response = await fetch('https://qnelsimar1452.replit.app/verify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ discordId, ip: ipData.ip, token }),
+      });
+      
+      const result = await response.json();
+      if (result.success) {
+        document.getElementById('status').textContent = 'Verification successful! Role assigned.';
+      } else {
+        document.getElementById('status').textContent = `Error: ${result.message}`;
+      }
+    });
+  </script>
+</body>
+</html>
