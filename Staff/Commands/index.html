@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Open Graph meta tags for social sharing -->
+  <meta property="og:title" content="CD Hub - Commands">
+  <meta property="og:description" content="List of available commands by rank for CD Hub staff members.">
+  <meta property="og:image" content="https://cdhub.store/Images/logo.png">
+  <meta property="og:url" content="https://cdhub.store/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CD Hub - Commands">
+  <meta name="twitter:description" content="List of available commands by rank for CD Hub staff members.">
+  <meta name="twitter:image" content="https://cdhub.store/Images/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CD Hub - Commands</title>
+  <link rel="stylesheet" href="../../CSS/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../Images/logo.png">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <div class="links">
+      <a href="https://cdhub.store/">Home</a>
+      <a href="../Commands">Commands</a>
+      <a href="../Rules">Rules</a>
+      <a href="../ToS">ToS</a>
+    </div>
+  </div>
+
+  <!-- Sidebar for mobile -->
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn">&times;</div>
+    <a href="https://cdhub.store/">Home</a>
+    <a href="../Commands">Commands</a>
+    <a href="../Rules">Rules</a>
+    <a href="../ToS">ToS</a>
+  </div>
+
+  <!-- Background animation -->
+  <div class="background"></div>
+
+  <!-- Main content -->
+  <div class="container">
+    <h1 class="title">CD Hub Commands</h1>
+    <p class="description">Below is the list of available commands sorted by staff rank.</p>
+
+    <!-- All ranks commands -->
+    <h2 class="subheading">All Ranks</h2>
+    <ul class="command-list">
+      <li><code>cd!warn user reason</code> - Warn a user for a specific reason.</li>
+      <li><code>cd!mute user time(minutes) reason</code> - Mute a user for a specific time with a reason.</li>
+      <li><code>cd!unmute user reason</code> - Unmute a previously muted user with a reason.</li>
+      <li><code>cd!ki key</code> - View information about a specific key.</li>
+      <li><code>cd!whois</code> - View data for a CD Hub account.</li>
+    </ul>
+
+    <!-- Elite Moderator commands -->
+    <h2 class="subheading">Elite Moderator</h2>
+    <ul class="command-list">
+      <li><code>cd!hwid user</code> - Reset the device ID of a user's account.</li>
+    </ul>
+
+    <!-- Lead Developer & Owner commands -->
+    <h2 class="subheading">Lead Developer & Owner</h2>
+    <ul class="command-list">
+      <li><code>cd!genType Days Provider</code> - Generate a key for CD Hub with specified type, days, and provider.</li>
+      <li><code>cd!ban user/key</code> - Ban a user or account using either the user or key.</li>
+      <li><code>cd!bn user days reason</code> - Ban a user from the server for a specific number of days with a reason.</li>
+    </ul>
+
+    <a href="https://cdhub.store/" class="btn">Back to Home</a>
+  </div>
+
+  <script src="../../JS/script.js"></script>
+</body>
+</html>
